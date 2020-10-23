@@ -19,5 +19,5 @@ For licensing information, see the attached LICENSE file and the list of third-p
 ### Architecture & Documentation
 The minimal architecture for the first iteration is sketched in the [architecture document](architecture.md).
 
-### Creates
+### Crates
 Each component from the [architecture document](architecture.md) is implemented in its own crate.
