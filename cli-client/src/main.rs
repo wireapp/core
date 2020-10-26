@@ -7,8 +7,8 @@ use nela::*;
 
 /// The client providing high-level operations that call into the different parts
 /// of the core library.
-pub struct Client {}
-impl Client {
+pub struct ClientApp {}
+impl ClientApp {
     /// Login on the backend with username and password
     pub fn login(_username: String, _password: String) -> Self {
         todo!();
@@ -30,12 +30,11 @@ impl Client {
     }
 }
 
-
 fn main() {
     // Login on the backend.
     let username = String::from("franziskuscoretest");
     let password = String::from("");
-    let client = Client::login(username, password);
+    let client = ClientApp::login(username, password);
 
     // Register push notification listener.
     // This should obviously go into its own thread.
@@ -60,10 +59,10 @@ fn main() {
     // Send a message.
     let msg = "Hi Fernando!";
     match client.send_message(Message::from(msg)) {
-        Ok(()) => {},
+        Ok(()) => {}
         Err(e) => {
             println!("Error sending messages: {:?}", e);
             std::process::exit(1);
-        },
+        }
     }
 }

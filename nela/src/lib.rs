@@ -9,6 +9,12 @@ pub enum Error {}
 #[derive(Debug)]
 pub struct Message {}
 
+// https://github.com/wearezeta/backend-api-docs/wiki/API-User-Authentication#password-login
+pub struct LoginMessage {
+    email: String,
+    password: String,
+}
+
 impl From<&'static str> for Message {
     fn from(_s: &'static str) -> Self {
         todo!();
@@ -26,6 +32,7 @@ pub struct ServerConfig {
 
 /// The main entry point for networking operations holding the configuration.
 pub struct Nela {
+    // https://prod-nginz-https.wire.com
     wire_backend: ServerConfig,
     mls_backend: ServerConfig,
 }
@@ -64,4 +71,3 @@ impl Nela {
         todo!();
     }
 }
-

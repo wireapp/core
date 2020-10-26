@@ -1,0 +1,3 @@
+[workspace]
+members = ["cli-client", "end", "human", "idem", "mema", "nela"]
+default-members = ["end", "human", "idem", "mema", "nela"]
