@@ -1,13 +1,11 @@
 //! # Wire Networking Layer
 //!
 
+use mema::Message;
+
 /// Errors that might occur on the networking layer.
 #[derive(Debug)]
 pub enum Error {}
-
-/// A message retrieved from the server
-#[derive(Debug)]
-pub struct Message {}
 
 // https://github.com/wearezeta/backend-api-docs/wiki/API-User-Authentication#password-login
 pub struct LoginMessage {
@@ -15,19 +13,13 @@ pub struct LoginMessage {
     password: String,
 }
 
-impl From<&'static str> for Message {
-    fn from(_s: &'static str) -> Self {
-        todo!();
-    }
-}
-
 /// Function pointer to retrieve push notifications from the server.
 pub type PushNotificationListener = fn(Message);
 
 /// Server configuration.
 pub struct ServerConfig {
-    url: String,
-    port: u16,
+    pub url: String,
+    pub port: u16,
 }
 
 /// The main entry point for networking operations holding the configuration.
@@ -68,6 +60,6 @@ impl Nela {
 
     /// Register a callback for push notifications.
     pub fn register_notification_listener(&self, _listener: PushNotificationListener) {
-        todo!();
+        // todo!();
     }
 }

@@ -6,7 +6,7 @@ Note that this is not the full picture but only shows a part at this point.
 ```
 +--------------------+                                      +--------------------+
 |                    |                                      |                    |
-|  Networking Layer  |                                      +     Persistence    |
+|  Networking Layer  |                                      |     Persistence    |
 |                    |                                      |        Layer       |
 +---------+----------+                                      +----------+---------+
           |                                                 |          |
@@ -20,7 +20,7 @@ Note that this is not the full picture but only shows a part at this point.
           |                             |                              |
           |                             |                              |
           |                             |                              |
-+---------------------------------------+------------------------------+-------------+
++---------+-----------------------------+------------------------------+-------------+
 |                                                                                    |
 |    +--------------------+     +--------------------+      +--------------------+   |
 |    |                    |     |                    |      |                    |   |

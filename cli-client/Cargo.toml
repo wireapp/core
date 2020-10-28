@@ -1,5 +1,5 @@
 [package]
-name = "cli-client"
+name = "client"
 version = "0.1.0"
 authors = ["Franziskus Kiefer <franziskuskiefer@gmail.com>"]
 edition = "2018"
@@ -8,6 +8,8 @@ description = "Wire cli client for testing"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+structopt = "0.3"
+
 human = { path = "../human", version = "0.1.0-alpha1" }
 idem = { path = "../idem", version = "0.1.0-alpha1" }
 mema = { path = "../mema", version = "0.1.0-alpha1" }

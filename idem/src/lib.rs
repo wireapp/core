@@ -5,6 +5,7 @@
 //! For now only basic credentials are supported, replicating the existing keys
 //! in the legacy Wire applications.
 
+#[derive(Default)]
 pub struct Identity {
     private_key: Vec<u8>,
     public_key: Vec<u8>,

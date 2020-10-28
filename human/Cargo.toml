@@ -9,3 +9,5 @@ description = "Wire User & Group Management"
 
 [dependencies]
 idem = { path = "../idem", version = "0.1.0-alpha1" }
+mema = { path = "../mema", version = "0.1.0-alpha1" }
+end = { path = "../end", version = "0.1.0-alpha1" }
